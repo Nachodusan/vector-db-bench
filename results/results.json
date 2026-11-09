@@ -1,0 +1,223 @@
+{
+  "generated_at": "2026-11-09T23:02:01.998471+00:00",
+  "machine": "arm64 \u00b7 Darwin 25.6.0",
+  "python": "3.13.14",
+  "corpus": {
+    "chunks": 41896,
+    "fingerprint": "3ba3ffb4b6a8599c",
+    "embedding_model": "BAAI/bge-m3",
+    "dim": 1024
+  },
+  "setup": {
+    "indexed": 41396,
+    "queries": 500,
+    "k": 10,
+    "m": 16,
+    "ef_construction": 200,
+    "ef_search_sweep": [
+      10,
+      20,
+      40,
+      80,
+      160,
+      320
+    ]
+  },
+  "engines": [
+    {
+      "engine": "qdrant",
+      "knob": "hnsw_ef",
+      "build_seconds": 11.28,
+      "build_note": "",
+      "vectors": 41396,
+      "dim": 1024,
+      "points": [
+        {
+          "ef_search": 10,
+          "recall": 0.8554,
+          "p50_ms": 1.089,
+          "p95_ms": 1.334,
+          "mean_ms": 1.117,
+          "qps": 895.3
+        },
+        {
+          "ef_search": 20,
+          "recall": 0.931,
+          "p50_ms": 1.267,
+          "p95_ms": 1.426,
+          "mean_ms": 1.273,
+          "qps": 785.5
+        },
+        {
+          "ef_search": 40,
+          "recall": 0.977,
+          "p50_ms": 1.334,
+          "p95_ms": 1.646,
+          "mean_ms": 1.37,
+          "qps": 730.1
+        },
+        {
+          "ef_search": 80,
+          "recall": 0.9948,
+          "p50_ms": 1.652,
+          "p95_ms": 1.915,
+          "mean_ms": 1.665,
+          "qps": 600.6
+        },
+        {
+          "ef_search": 160,
+          "recall": 0.9992,
+          "p50_ms": 2.319,
+          "p95_ms": 2.772,
+          "mean_ms": 2.36,
+          "qps": 423.8
+        },
+        {
+          "ef_search": 320,
+          "recall": 1.0,
+          "p50_ms": 3.003,
+          "p95_ms": 3.528,
+          "mean_ms": 3.056,
+          "qps": 327.2
+        }
+      ],
+      "knob_effective": true,
+      "monotonic": true,
+      "latency_at_recall": {
+        "0.9": 1.388,
+        "0.95": 1.517,
+        "0.99": 1.842
+      }
+    },
+    {
+      "engine": "chroma",
+      "knob": "hnsw:search_ef",
+      "build_seconds": 21.34,
+      "build_note": "",
+      "vectors": 41396,
+      "dim": 1024,
+      "points": [
+        {
+          "ef_search": 10,
+          "recall": 0.9716,
+          "p50_ms": 2.037,
+          "p95_ms": 2.385,
+          "mean_ms": 2.007,
+          "qps": 498.2
+        },
+        {
+          "ef_search": 20,
+          "recall": 0.9716,
+          "p50_ms": 2.073,
+          "p95_ms": 2.442,
+          "mean_ms": 2.046,
+          "qps": 488.7
+        },
+        {
+          "ef_search": 40,
+          "recall": 0.9716,
+          "p50_ms": 2.053,
+          "p95_ms": 2.397,
+          "mean_ms": 2.019,
+          "qps": 495.4
+        },
+        {
+          "ef_search": 80,
+          "recall": 0.9716,
+          "p50_ms": 2.022,
+          "p95_ms": 2.395,
+          "mean_ms": 1.993,
+          "qps": 501.8
+        },
+        {
+          "ef_search": 160,
+          "recall": 0.9716,
+          "p50_ms": 2.008,
+          "p95_ms": 2.376,
+          "mean_ms": 1.987,
+          "qps": 503.4
+        },
+        {
+          "ef_search": 320,
+          "recall": 0.9716,
+          "p50_ms": 1.997,
+          "p95_ms": 2.353,
+          "mean_ms": 1.973,
+          "qps": 507.0
+        }
+      ],
+      "knob_effective": false,
+      "monotonic": true,
+      "latency_at_recall": {
+        "0.9": null,
+        "0.95": null,
+        "0.99": null
+      }
+    },
+    {
+      "engine": "pgvector",
+      "knob": "hnsw.ef_search",
+      "build_seconds": 187.75,
+      "build_note": "copy 10.0s, index 177.7s, maintenance_work_mem=2GB, parallel_workers=4",
+      "vectors": 41396,
+      "dim": 1024,
+      "points": [
+        {
+          "ef_search": 10,
+          "recall": 0.7648,
+          "p50_ms": 0.813,
+          "p95_ms": 1.12,
+          "mean_ms": 0.842,
+          "qps": 1187.1
+        },
+        {
+          "ef_search": 20,
+          "recall": 0.8664,
+          "p50_ms": 1.18,
+          "p95_ms": 1.503,
+          "mean_ms": 1.211,
+          "qps": 825.6
+        },
+        {
+          "ef_search": 40,
+          "recall": 0.9384,
+          "p50_ms": 1.923,
+          "p95_ms": 2.351,
+          "mean_ms": 1.924,
+          "qps": 519.8
+        },
+        {
+          "ef_search": 80,
+          "recall": 0.979,
+          "p50_ms": 3.247,
+          "p95_ms": 3.903,
+          "mean_ms": 3.208,
+          "qps": 311.7
+        },
+        {
+          "ef_search": 160,
+          "recall": 0.9934,
+          "p50_ms": 5.703,
+          "p95_ms": 6.899,
+          "mean_ms": 5.64,
+          "qps": 177.3
+        },
+        {
+          "ef_search": 320,
+          "recall": 0.998,
+          "p50_ms": 9.699,
+          "p95_ms": 11.807,
+          "mean_ms": 9.559,
+          "qps": 104.6
+        }
+      ],
+      "knob_effective": true,
+      "monotonic": true,
+      "latency_at_recall": {
+        "0.9": 1.899,
+        "0.95": 2.794,
+        "0.99": 6.192
+      }
+    }
+  ]
+}
