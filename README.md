@@ -1,5 +1,7 @@
 # vector-db-bench
 
+[![tests](https://github.com/Nachodusan/vector-db-bench/actions/workflows/tests.yml/badge.svg)](https://github.com/Nachodusan/vector-db-bench/actions/workflows/tests.yml)
+
 Comparing vector databases at default settings measures the defaults.
 
 Every HNSW implementation trades accuracy for speed on a knob. Quote one
